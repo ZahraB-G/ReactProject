@@ -23,17 +23,18 @@
     <span>Right click the block</span>
 
     <script>
-      // document.addEventListener(
-      //   "contextmenu",
-      //   function (event) {
-      //     event.preventDefault();
-      //   },
-      //   true
-      // );
-      // $("a").contextmenu(function () {
-      //   // alert("clicked");
-      //   window.open("https://www.yahoo.con", "_blank").focus();
-      // });
+      document.addEventListener(
+        "contextmenu",
+        function (event) {
+          event.preventDefault();
+        },
+        true
+      );
+      $("a").contextmenu(function () {
+        if (this.text === "Privacy Center" || this.text === "mapp-include") {
+          window.open("/privacy", "_blank").focus();
+        }
+      });
     </script>
   </body>
 </html>
